@@ -11,6 +11,7 @@ Kullanılan resim Resim1 deki gibidir.
 
 <img src="straight_lines2.jpg" width="auto">
            Resim1: Yol Resmi
+           
 
 
 ## Renk Seçimi  (Color Selection)
