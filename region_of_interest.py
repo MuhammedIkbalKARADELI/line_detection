@@ -26,6 +26,7 @@ edges = cv2.Canny(blur_gray, low_threshold, high_threshold)
 # Display the image of the canny edge detected image
 plt.imshow(edges, cmap='Greys_r')
 plt.title("Canny Edge Detection Image")
+plt.savefig("Canny_Edge_Detection.png")
 plt.show()
 
 
@@ -56,5 +57,6 @@ masked_image = cv2.bitwise_and(image, mask)
 
 plt.imshow(masked_image, cmap='Greys_r')
 plt.title("Region of interested Image")
+plt.savefig("Region_of_Interested.png")
 plt.show()
 
