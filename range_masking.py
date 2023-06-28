@@ -3,7 +3,7 @@ import matplotlib.image as mpimg
 import numpy as np
 
 # Read in the image
-image = mpimg.imread(r'/Applications/Work Space/python work space/projects/Lane_line_detection/deneme.jpeg')
+image = mpimg.imread(r'/Applications/Work Space/python work space/projects/line_detection/road.jpeg')
 
 # Grab the x and y size and make a copy of the image
 ysize = image.shape[0]
@@ -13,9 +13,9 @@ line_image = np.copy(image)
 
 # Define color selection criteria
 # MODIFY THESE VARIABLES TO MAKE YOUR COLOR SELECTION
-red_threshold = 200
-green_threshold = 200
-blue_threshold = 200
+red_threshold = 150
+green_threshold = 150
+blue_threshold = 100
 
 rgb_threshold = [red_threshold, green_threshold, blue_threshold]
 
@@ -23,9 +23,9 @@ rgb_threshold = [red_threshold, green_threshold, blue_threshold]
 # Keep in mind the origin (x=0, y=0) is in the upper left
 # MODIFY THESE VALUES TO ISOLATE THE REGION 
 # WHERE THE LANE LINES ARE IN THE IMAGE
-left_bottom = [180, 160]
-right_bottom = [540, 330]
-apex = [250, 330]
+left_bottom = [160, 530]
+right_bottom = [870, 530]
+apex = [480, 310]
 
 # Perform a linear fit (y=Ax+B) to each of the three sides of the triangle
 # np.polyfit returns the coefficients [A, B] of the fit
@@ -47,7 +47,7 @@ region_thresholds = (YY > (XX*fit_left[0] + fit_left[1])) & \
 # Mask color and region selection
 color_select[color_thresholds | ~region_thresholds] = [0, 0, 0]
 # Color pixels red where both color and region selections met
-line_image[~color_thresholds & region_thresholds] = [9, 255, 0]
+line_image[~color_thresholds & region_thresholds] = [0, 255, 0]
 
 # Display the image and show region and color selections
 plt.imshow(image)
@@ -63,5 +63,5 @@ plt.savefig("Color_Selection.jpeg")
 plt.show()
 plt.imshow(line_image)
 plt.title("Output Image")
-plt.savefig("range_.jpeg")
+plt.savefig("Range_Masking.jpeg")
 plt.show()
