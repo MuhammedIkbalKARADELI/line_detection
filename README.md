@@ -48,6 +48,11 @@ Canny edge detection dan önce gürültüleri ve sahte gradyanları ortalama ola
 Gauss yumuşatma için kernel_size öğesinin herhangi bir tek sayı olarak seçilebilir. Daha büyük kernel_size, daha geniş bir alın üzerinde ortalama alma veya yumuşatma anlamına gelir.
 
 
+
+<img src="canny_edge_detection.jpeg" width="auto">
+           Resim6: Canny_Edge_Detection.jpeg
+
+
 ## İlgi alanı (Region of Interest)
 İlgi alanında olmayan canny edge detection sonuçları maskelemede kullanılan bir yöntemdir.
 Canny edge detection uygulandıktan sonra bile şerit olmayan birçok kenar algılanır. İlgi alanı, görüntüdeki alnı, ilgilendiğimiz kenarlardan tanımlayan bir çokgendir. 
