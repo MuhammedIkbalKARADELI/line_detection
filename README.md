@@ -7,9 +7,9 @@ Ve basit Bilgisayar Görüntüsü teknikleriyle çok basit Şerit Tespiti mümk�
 Bu kodlar, Python ve OpenCV kullanılarak basit şerit tespiti için kullanılabilecek basit şerit hattını gösterecektir.
 Paylaşılan a.py ve b.py kodları denenip ve bu kod parçacıklarından yararlanılarak proje yapılmıştır. 
 Buradan erişebilirsiniz: https://data-flair.training/blogs/road-lane-line-detection/
-Üzerinde durulan örnek resim road.jpeg dosyasıdır.
+Kullanılan resim Resim1 deki gibidir.
 
-<img src="deneme.jpeg" width="auto">
+<img src="straight_lines2.jpg" width="auto">
            Resim1: Yol Resmi
 
 
