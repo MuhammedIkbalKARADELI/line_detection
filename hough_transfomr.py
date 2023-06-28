@@ -13,8 +13,8 @@ kernel_size = 5
 blur_gray = cv2.GaussianBlur(gray,(kernel_size, kernel_size),0)
 
 # Define our parameters for Canny and apply
-low_threshold = 190
-high_threshold = 240
+low_threshold = 100
+high_threshold = 200
 edges = cv2.Canny(blur_gray, low_threshold, high_threshold)
 
 # Next we'll create a masked edges image using cv2.fillPoly()
@@ -49,12 +49,41 @@ for line in lines:
 # Create a "color" binary image to combine with line image
 color_edges = np.dstack((edges, edges, edges)) 
 
+
 # Draw the lines on the edge image
 lines_edges = cv2.addWeighted(color_edges, 0.8, line_image, 1, 0)
 lines_edges = cv2.polylines(lines_edges,vertices, True, (0,0,255), 10)
-plt.imshow(image)
-plt.title("Input Image")
-plt.show()
+
+#apply mask
+lowerLeftPoint = [130, 540]
+upperLeftPoint = [450, 315]
+upperRightPoint = [520, 315]
+lowerRightPoint = [915, 540]
+
+pts = np.array([[lowerLeftPoint, upperLeftPoint, upperRightPoint, lowerRightPoint]], dtype=np.int32)
+
+image = lines_edges.copy()
+#defining a blank mask to start with
+mask = np.zeros_like(image)
+
+#defining a 3 channel or 1 channel color to fill the mask with depending on the input image
+if len(image.shape) > 2:
+    channel_count = image.shape[2]  # i.e. 3 or 4 depending on your image
+    ignore_mask_color = (255,) * channel_count
+else:
+    ignore_mask_color = 255
+
+#filling pixels inside the polygon defined by "vertices" with the fill color    
+cv2.fillPoly(mask, pts, ignore_mask_color)
+    
+#returning the image only where mask pixels are nonzero
+masked_image = cv2.bitwise_and(image, mask)
+
+# Draw the lines on the edge image
+lines_edges = cv2.addWeighted(masked_image, 0.8, line_image, 1, 0)
+lines_edges = cv2.polylines(lines_edges,vertices, True, (0,0,255), 10)
+
 plt.imshow(lines_edges)
 plt.title("Colored Lane line [In RED] and Region of Interest [In Blue]")
+plt.savefig("Hough_transform.png")
 plt.show()
