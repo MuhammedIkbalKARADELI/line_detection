@@ -39,7 +39,7 @@ plt.title("Input Image")
 plt.show()
 plt.imshow(color_select)
 plt.title("Color Selected Image")
-plt.savefig("Color_Selected.png")
+plt.savefig("color_selected.png")
 plt.show()
 
 
