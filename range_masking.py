@@ -57,10 +57,12 @@ plt.plot(x, y, 'r--', lw=4)
 plt.title("Region Of Interest")
 plt.savefig("regionOf_interest.jpeg")
 plt.show()
+
 plt.imshow(color_select)
 plt.title("Color Selection")
 plt.savefig("masked_color_selection.jpeg")
 plt.show()
+
 plt.imshow(line_image)
 plt.title("Output Image")
 plt.savefig("range_masking.jpeg")
