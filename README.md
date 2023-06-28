@@ -63,7 +63,7 @@ Kısaca araba kamerasının ilgi alanı, yalnızca görüş alanındaki iki şer
            Resim7: Canny_Edge_Detection
 
 
-<img src="Region_Of_Interested.png" width="auto">
+<img src="Region_of_Interested.png" width="auto">
            Resim8: Region_Of_Interested
 
 
