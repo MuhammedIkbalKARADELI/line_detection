@@ -15,7 +15,7 @@ Kullanılan resim Resim1 deki gibidir.
 
 
 ## Renk Seçimi  (Color Selection)
-Önce bazı renkler seçilir. Örneğin: Şerit Çizgileri genellikle Beyaz renktedir ve Beyaz'ın RGB değerinin (255,255,255) olduğunu biliyoruz. Burada red_threshold, green_threshold ve blue_threshold değişkenlerinde bir renk eşiği değeri tanımlanır ve rgb_threshold bu değerlerle hesaplanır. Bu vektörde seçilen kırmızı, yeşil ve mavi (R,G,B) için minimum değerleri içerir. Bu ilk adım olarka yol resimine denenir. Burda denenilen yol resmi straight_lines2.jpg doyasındaki resimden yaralanılır. 
+Önce bazı renkler seçilir. Örneğin: Şerit Çizgileri genellikle Beyaz renktedir ve Beyaz'ın RGB değerinin (255,255,255) olduğunu biliyoruz. Burada red_threshold, green_threshold ve blue_threshold değişkenlerinde bir renk eşiği değeri tanımlanır ve rgb_threshold bu değerlerle hesaplanır. Bu vektörde seçilen kırmızı, yeşil ve mavi (R,G,B) için minimum değerleri içerir. Bu ilk adım olarka yol resimine denenir. Burda denenilen yol resmi straight_lines2.jpg doyasındaki resimden yaralanılır. Bu işlemi color_selection.py dosyasındaki gibidir.
 
 <img src="color_selected.png" width="auto">
            Resim2: Color_selected_Image
@@ -27,8 +27,7 @@ Görüntüyü çeken öne bakan kameranın, şerit çizgilerinin her zaman gör�
 <img src="RegionOf_Interest.jpeg" width="auto">
            Resim3: Region_Of_Interest
 
-<img src="Color_Selection.jpeg" width="auto">
-           Resim4: Color_Selection
+
 
 Resim4 de görüldüğü üzere 
 
