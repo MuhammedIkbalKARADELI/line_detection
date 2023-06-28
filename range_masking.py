@@ -3,7 +3,7 @@ import matplotlib.image as mpimg
 import numpy as np
 
 # Read in the image
-image = mpimg.imread(r'/Applications/Work Space/python work space/projects/line_detection/road.jpeg')
+image = mpimg.imread('road.jpeg')
 
 # Grab the x and y size and make a copy of the image
 ysize = image.shape[0]
@@ -55,13 +55,13 @@ x = [left_bottom[0], right_bottom[0], apex[0], left_bottom[0]]
 y = [left_bottom[1], right_bottom[1], apex[1], left_bottom[1]]
 plt.plot(x, y, 'r--', lw=4)
 plt.title("Region Of Interest")
-plt.savefig("RegionOf_Interest.jpeg")
+plt.savefig("regionOf_interest.jpeg")
 plt.show()
 plt.imshow(color_select)
 plt.title("Color Selection")
-plt.savefig("Color_Selection.jpeg")
+plt.savefig("masked_color_selection.jpeg")
 plt.show()
 plt.imshow(line_image)
 plt.title("Output Image")
-plt.savefig("Range_Masking.jpeg")
+plt.savefig("range_masking.jpeg")
 plt.show()
