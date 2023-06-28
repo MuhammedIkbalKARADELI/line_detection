@@ -57,7 +57,14 @@ Gauss yumuşatma için kernel_size öğesinin herhangi bir tek sayı olarak seç
 İlgi alanında olmayan canny edge detection sonuçları maskelemede kullanılan bir yöntemdir.
 Canny edge detection uygulandıktan sonra bile şerit olmayan birçok kenar algılanır. İlgi alanı, görüntüdeki alnı, ilgilendiğimiz kenarlardan tanımlayan bir çokgendir. 
 Buradaki varsayım, ilgili bölgenin tahmin edilebilmesi için kameranın sabit bir yerde kalması ve şeritlerin düz olması için geçerlidir. 
-Kısaca araba kamerasının ilgi alanı, yalnızca görüş alanındaki iki şerittir. Diğer yabancı herhangi bir şey değildir. Buda görsele ilgilenilen bir alan oluşturularak ve o alanda olmayan diğer tüm yabancı pikselleri kaldırarak filtrelenir.
+Kısaca araba kamerasının ilgi alanı, yalnızca görüş alanındaki iki şerittir. Diğer yabancı herhangi bir şey değildir. Buda görsele ilgilenilen bir alan oluşturularak ve o alanda olmayan diğer tüm yabancı pikselleri kaldırarak filtrelenir. İlgi alanın önemini Resim7 ile Resim8 arasındaki fark net şekilde görülmektedir. 
+
+<img src="Canny_Edge_Detection.png" width="auto">
+           Resim7: Canny_Edge_Detection
+
+
+<img src="Region_Of_Interested.png" width="auto">
+           Resim8: Region_Of_Interested
 
 
 ## Hough Dönüşümü ve Şerit çizgilerini Algılama (Hough Transform and Detecting lane lines)
