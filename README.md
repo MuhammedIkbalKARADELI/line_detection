@@ -24,12 +24,19 @@ Kullanılan resim Resim1 deki gibidir.
 ## Aralık Maskeleme  (Range Masking)
 Görüntüyü çeken öne bakan kameranın, şerit çizgilerinin her zaman görüntünün aynı genel bölgesinde görünecek şekilde arabaya sabit bir konuma monte edildiğini varsayılır. Ardından, şerit çizgilerini bulmayı umduğumuz bölgede renk seçimi için yalnızca pikselleri dikkate alan bir kriter ekleyerek bundan yararlanılır. left_bottom, right_bottom ve apex değişkenleri, diğer her şeyi maskeleyerek renk seçimim için korunması istenilen üçgen bir bölgenin köşelerini temsil ediyor. Burada en basit durumu göstermek için üçgen bir maske kullanılır, ancak bir dörtgen kullanılabilir ve bu prensipte herhangi bir çokgen kullanılabilir. 
 
-<img src="RegionOf_Interest.jpeg" width="auto">
+<img src="regionOf_interest.jpeg" width="auto">
            Resim3: Region_Of_Interest
 
 
+<img src="masked_color_selection.jpeg" width="auto">
+           Resim4: Masked_Color_Selection
 
-Resim4 de görüldüğü üzere 
+
+<img src="range_masking.jpeg" width="auto">
+           Resim5: Range_Masking           
+
+
+
 
 
 ## Canny Kenar Tespiti (Canny Edge Detection)
