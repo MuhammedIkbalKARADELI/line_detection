@@ -57,7 +57,7 @@ Gauss yumuşatma için kernel_size öğesinin herhangi bir tek sayı olarak seç
 İlgi alanında olmayan canny edge detection sonuçları maskelemede kullanılan bir yöntemdir.
 Canny edge detection uygulandıktan sonra bile şerit olmayan birçok kenar algılanır. İlgi alanı, görüntüdeki alnı, ilgilendiğimiz kenarlardan tanımlayan bir çokgendir. 
 Buradaki varsayım, ilgili bölgenin tahmin edilebilmesi için kameranın sabit bir yerde kalması ve şeritlerin düz olması için geçerlidir. 
-Kısaca araba kamerasının ilgi alanı, yalnızca görüş alanındaki iki şerittir. Diğer yabancı herhangi bir şey değildir. Buda görsele ilgilenilen bir alan oluşturularak ve o alanda olmayan diğer tüm yabancı pikselleri kaldırarak filtrelenir. İlgi alanın önemini Resim7 ile Resim8 arasındaki fark net şekilde görülmektedir. 
+Kısaca araba kamerasının ilgi alanı, yalnızca görüş alanındaki iki şerittir. Diğer yabancı herhangi bir şey değildir. Buda görsele ilgilenilen bir alan oluşturularak ve o alanda olmayan diğer tüm yabancı pikselleri kaldırarak filtrelenir. İlgi alanın önemini Resim7 ile Resim8 arasındaki fark net şekilde görülmektedir. Bu işlemi region_of_interested.py dosyasındaki gibidir.
 
 <img src="Canny_Edge_Detection.png" width="auto">
            Resim7: Canny_Edge_Detection
@@ -69,6 +69,9 @@ Kısaca araba kamerasının ilgi alanı, yalnızca görüş alanındaki iki şer
 
 ## Hough Dönüşümü ve Şerit çizgilerini Algılama (Hough Transform and Detecting lane lines)
 Görüntü Uzayında, bir çizgi x’e karşı y olarak çizilir, ancak 1962’de Paul Hough, onun onurunda “Hough Space” adı verilen, parametre uzayında çizgileri temsil etmek için bir yöntem geliştirmiştir. Hough uzayında, (x,y) = (m,b) de bir nokta olarak gösterilmiştir. Hough dönüşümü, görüntü uzayında Hough uzayına dönüşümdür. Dolayısıyla, görüntü uzayındaki bir doğrunun karakterizasyonu, Hough uzayındaki (m,b) konumundaki tek bir nokta olacaktır.
-İlgilenilen bölgede kenarları tespit ettiğimizde, şerit çizgilerini gösteren çizgileri belirlemek istenir. Hough dönüşümünün kullanışlı olduğu yer burasıdır.
+İlgilenilen bölgede kenarları tespit ettiğimizde, şerit çizgilerini gösteren çizgileri belirlemek istenir. Hough dönüşümünün kullanışlı olduğu yer burasıdır. Bu işlemi hough_transfomr.py dosyasındaki gibidir.
+
+<img src="Hough_transform.png" width="auto">
+           Resim9: Hough Transform
 
 ![image](https://github.com/MuhammedIkbalKARADELI/line_detection/assets/87783022/28c78ccd-0328-4c0b-9ebf-93e3966cf583)
