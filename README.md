@@ -45,7 +45,12 @@ Gri ölçekli görüntüye Canny edge detection uygulanarak çıktılar, girdide
 Bu parametreler için makul aralık olarak en mantıklı yaklaşım için gri tonlamaya dönüştürerek 8 bitlik 2 boyutlu bir görüntü sunar. Bu nedenle 2^8 = 256 olası değer olabilir. Buda 0-255 piksel değerlerini kapsar.
 Düşük eşik ile yüksek eşik oranı söz konusu olduğunda, 1:2 veya 1:3 oranları Jhon Canny tarafından önerilmektedir. 
 Canny edge detection dan önce gürültüleri ve sahte gradyanları ortalama olarak bastırmanın bir yolu olan Gauss yumuşatmayı da dahil edilir. Cv2.Canny() aslında Gauss yumuşatmasını dahili olarak uygulanılır. Ancak daha fazla yumuşatma uygulanarak farklı bir sonuç elde edilebileceği için buraya dahil edilir. 
-Gauss yumuşatma için kernel_size öğesinin herhangi bir tek sayı olarak seçilebilir. Daha büyük kernel_size, daha geniş bir alın üzerinde ortalama alma veya yumuşatma anlamına gelir.
+Gauss yumuşatma için kernel_size öğesinin herhangi bir tek sayı olarak seçilebilir. Daha büyük kernel_size, daha geniş bir alın üzerinde ortalama alma veya yumuşatma anlamına gelir.Bu işlemi canny_edge_detection.py dosyasındaki gibidir.
+
+
+
+<img src="canny_edge_detection.jpeg" width="auto">
+           Resim6: Canny_Edge_Detection.jpeg
 
 
 ## İlgi alanı (Region of Interest)
