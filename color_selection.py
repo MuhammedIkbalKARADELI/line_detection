@@ -4,7 +4,7 @@ import numpy as np
 
 
 # Read in the image
-image = mpimg.imread(r'/Applications/Work Space/python work space/projects/Lane_line_detection/deneme.jpeg')
+image = mpimg.imread('straight_lines2.jpg')
 
 
 # Grab the x and y size and make a copy of the image
