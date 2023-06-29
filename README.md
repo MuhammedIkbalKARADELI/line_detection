@@ -74,4 +74,4 @@ Görüntü Uzayında, bir çizgi x’e karşı y olarak çizilir, ancak 1962’d
 <img src="Hough_transform.png" width="auto">
            Resim9: Hough Transform
 
-![image](https://github.com/MuhammedIkbalKARADELI/line_detection/assets/87783022/28c78ccd-0328-4c0b-9ebf-93e3966cf583)
+
